@@ -1,14 +1,3 @@
 {
-  "tasks": [
-    {
-      "title": "komal",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "title": "mehta",
-      "completed": false,
-      "id": 2
-    }
-  ]
+  "tasks": []
 }

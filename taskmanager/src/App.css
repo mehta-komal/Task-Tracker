@@ -1,0 +1,50 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.form-input{
+   background-color: black;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+button{
+    background-color: black;
+    height: 50px;
+    width: 130px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.form-main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul{
+   
+    list-style: none;
+    font-size: 30px;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.input-box{
+    height: 40px;
+    width: 30px;
+    background-color: white;
+}

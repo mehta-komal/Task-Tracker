@@ -1,18 +1,25 @@
 import React, { useReducer, useEffect, useState } from 'react';
 import axios from 'axios';
+import "./App.css"
 
 const TaskForm = ({ addTask }) => {
   const [newTask, setNewTask] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTask(newTask);
-    setNewTask('');
+    if(newTask === '' ){
+      alert("please enter the task")
+    }else{
+      addTask(newTask);
+      setNewTask('');
+    }
+ 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='form-main' onSubmit={handleSubmit}>
       <input
+      className='form-input'
         type="text"
         placeholder="Add new task"
         value={newTask}
@@ -29,6 +36,7 @@ const TaskList = ({ tasks, toggleTask, deleteTask }) => {
       {tasks.map((task) => (
         <li key={task.id}>
           <input
+          className='input-box'
             type="checkbox"
             checked={task.completed}
             onChange={() => toggleTask(task.id)}
@@ -107,7 +115,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='main'>
       <h1>Task Tracker</h1>
       <TaskForm addTask={addTask} />
       <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
